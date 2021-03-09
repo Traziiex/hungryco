@@ -33,46 +33,41 @@ h1{
 }
 
 #search-form{
-    height: 6vh;
+    height: 40px;
     width: 30vw;
-}
-
-form{
-    height: 100%;
-}
-
-fieldset{
-    border: none;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    display:flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 input{
-    min-height: 40px;
     margin: 2px;
-    height: 80%;
+    height: 100%;
     width: 80%;
     border:none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     text-align:center;
     font-size: 1em;
+    font-family: sans-serif;
 }
 
-button{
-    min-height: 40px;
-    height: 80%;
+#search-button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
     margin:2px;
     width:20%;
-    padding:10px;
     font-weight: bold;
-    font-size: 70%;
+    font-size: 100%;
     border-style: none;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     background-color: rgb(107, 107, 107);
+    font-family: sans-serif;
 }
 
 @media only screen and (max-width: 900px) {
