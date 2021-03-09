@@ -3,6 +3,9 @@ const searchText = query.replaceAll("%20", " ");
 const key = "9a82bba66428019f581ebff5d7635c9c";
 const id = "4b353692";
 
+const searchBtn = document.getElementById("search-button");
+const searchBar = document.getElementById("search-bar")
+
 let hits;
 
 const getRecipe = async () => {
@@ -10,10 +13,21 @@ const getRecipe = async () => {
     const data = await response.json();
     hits = data.hits;
     console.log(hits);
+    await displayResults();
 }
 
 const firstLoad = () => {
     getRecipe();
 }
+
+const displayResults = () => {
+    hits.map(hit => console.log(hit.recipe.label))
+}
+
+const searchMethod = () => {
+    window.location.href = `./results.html?${searchBar.value}`;
+}
+
+searchBtn.addEventListener("click", searchMethod);
 
 window.onload = firstLoad();
